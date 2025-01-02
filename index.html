@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+<div id = "header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Tech Enthusiast</p>
+            <h1>Hi, I'm <span>Jiban</span><br>Chaudhary From Nepal</h1>
+        </div>
+    </div>
+
+</div>
+<!-- ------------about------------ -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.JPG">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hey there! I'm a Computer Engineering student with a passion for all things tech.
+                     I’ve had the chance to work as a Data Specialist , where I first got my toes into data processing 
+                     and machine learning .I'm all about finding solutions that not only work, but also slightly improve
+                     the quality of life and make it a bit cooler.
+                    I enjoy solving-problems, whether it's coming up with effective system designs or optimizing code, 
+                    When I am not knee-deep in code I am probably checking out the new tech, picking up a new skill, 
+                    cooking up ideas for a new project.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Python Developer</span><br>Writing scalable, efficient code.</li>
+                            <li><span>AI & Machine Learning</span><br>Developing intelligent systems.</li>
+                            <li><span>Django</span><br>Building robust web applications.</li>
+                            <li><span>TensorFlow</span><br>Creating and deploying ML models.</li>
+                            <li><span>Pandas</span><br>Data manipulation and analysis.</li>
+                            <li><span>NumPy</span><br>Numerical computing with large datasets.</li>
+                            <li><span>Matplotlib</span><br>Data visualization and graphing.</li>
+                            <li><span>OpenCV</span><br>Image and video processing.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Data Specialist, Cloudfactory</span><br>
+                                Lalitpur, Nepal (Dec 2019 - Mar 2021)</li>
+                            <li><span>Key Responsibilities</span><br>
+                                - Data annotation and labeling.<br>
+                                - Data management and image processing.<br>
+                                - Quality assurance to maintain data integrity.</li>
+                        </ul>   
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <ul>
+                                <li><span>Bachelor in Computer Engineering</span><br>
+                                    Advanced College of Engineering and Management, Kathmandu<br>
+                                    May 2021 - May 2025</li>
+                                <li><span>High School</span><br>
+                                    Xavier International College, Kathmandu, Kalopul<br>
+                                    May 2018 - May 2019 (GPA: 3.21)</li>
+                            </ul>
+                    </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- ------------Portfolio------------ -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/Deepfake_detector.png">
+                <div class="layer">
+                    <h3>Deepfake_detection_using_Xceptionnet_LSTM</h3>
+                    <p>The AI-Generated Fake Video Detector is a web application designed to 
+                        identify AI-generated manipulated videos by the implementation of 
+                        Deep learning Techniques Like Xceptionnet and LSTM, commonly known as deepfakes.
+                         By leveraging advanced deep learning techniques, this tool 
+                         helps combat misinformation and promote trustworthy visual content online.</p>
+                    <a href="https://github.com/jibanchaudhary/Deepfake_detection_using_Xceptionnet_LSTM"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/AES_pixelvault.png">
+                <div class="layer">
+                    <h3>AES_PixelVault</h3>
+                    <p>AES PixelVault is a comprehensive data encryption system that handles both encryption and decryption, as well as encoding and decoding. It secures text files (such as PDFs) by first encrypting the content using AES, converting the text into binary, and encoding these 0s and 1s into black and white pixels within video frames. The encoded frames are concatenated into a video for secure storage. The project also includes a decryption and decoding module to reverse the process, extracting the original data from the video. This novel approach merges cryptography with video processing for a unique and secure method of data storage and retrieval.</p>
+                    <a href="https://github.com/jibanchaudhary/AES_PixelVault"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/webscraper.png">
+                <div class="layer">
+                    <h3>Data-Scraping-Using-BeautifulSoup-and-Selenium</h3>
+                    <p>A Python scraper using Selenium, BeautifulSoup and pandas to collect and save historical stock transaction data from Merolagani in CSV format for analysis.</p>
+                    <a href="https://github.com/jibanchaudhary/Data-Scraping-Using-BeautifulSoup-and-Selenium"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/loksarathi.png">
+                <div class="layer">
+                    <h3>Loksarathi</h3>
+                    <p>LokSarathi is a dynamic educational platform built using Django, designed to help users prepare for Lok Sewa competitive exams. It offers a comprehensive collection of reference books, quizzes, PDFs, and notices, creating a one-stop resource center for students.</p>
+                    <a href="https://github.com/jibanchaudhary/LokSarathi"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class ="btn">See more</a>
+    </div>
+</div>
+
+<!-- -------------------contact------------------ -->
+ <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fas fa-paper-plane"></i>Jibanchaudhary101@gmail.com</p>
+                <p><i class="fas fa-phone-square-alt"></i>+977 9803119656</p>
+                <div class="social-icons">
+                    <a href="https://github.com/jibanchaudhary"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/jiban-chaudhary-aa2994208/"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+
+                </div>
+                <a href="images/Jibanchaudhary_ cv.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Jiban Chaudhary. All rights reserved.</p>
+        </div>
+    </div>
+ </div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for (tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+
+</script>
+<script>
+    const scriptURL = 'SCRIPT_URL' // Enter the google sheet script url
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
