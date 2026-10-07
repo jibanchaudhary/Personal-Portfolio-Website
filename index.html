@@ -112,11 +112,11 @@
 
       <div class="hero-portrait fade">
         <div class="portrait-ring">
-          <!-- Drop a photo at assets/profile.jpg and it replaces the monogram. -->
-          <img id="portrait-img" src="assets/profile.jpg" alt="Jiban Chaudhary" width="320" height="320" />
+          <!-- Drop a photo at assets/profile.jpeg and it replaces the monogram. -->
+          <img id="portrait-img" src="assets/profile.jpeg" alt="Jiban Chaudhary" width="320" height="320" />
           <div class="portrait-fallback" id="portrait-fallback">
             <span class="mono-initials">JC</span>
-            <span class="mono-hint">add assets/profile.jpg</span>
+            <span class="mono-hint">add assets/profile.jpeg</span>
           </div>
         </div>
         <div class="portrait-badge">
@@ -136,7 +136,7 @@
         <span class="stat-label">model types in one pipeline<br />segmentation, detection, OCR, super-res, transformers</span>
       </li>
       <li class="fade">
-        <span class="stat-num">6</span>
+        <span class="stat-num">4</span>
         <span class="stat-label">years working with data<br />annotation at CloudFactory to ML engineering</span>
       </li>
     </ul>
@@ -150,7 +150,9 @@
         <div class="about-body">
           <p>
             Hey there! I'm a Computer Engineer with a passion for all things tech. I've had the chance to
-            work as a Data Specialist, where I first got my toes into data processing and machine learning.
+            work as a Data Specialist, where I first got my toes into data processing and machine learning and now
+            my work spans data processing, model development, and end-to-end ML pipelines, with an emphasis on building reliable
+            systems that turn complex data into useful results.
             I'm all about finding solutions that not only work, but also slightly improve the quality of
             life and make it a bit cooler.
           </p>
@@ -251,17 +253,19 @@
             whether someone gets a biopsy.
           </p>
           <p>
-            TI-RACS trains four modern backbones — ConvNeXt-T, EfficientNetV2-S, Swin-T and ViT-B/16 —
-            and combines them by soft voting. The whole pipeline is there: dataset construction from XML
-            annotations and SVG masks, training with early stopping, 5-fold cross-validation with ablation
-            tables and confusion matrices, then inference with Grad-CAM heatmaps so the prediction comes
-            with a picture of what the model attended to.
+            TI-RACS is an image-based deep learning system for multi-class TI-RADS classification. 
+            The project benchmarks modern vision backbones, including ConvNeXt, EfficientNet, 
+            Swin Transformer and ViT, with Swin Transformer achieving the strongest performance in our experiments. 
+            The current research direction focuses on a Swin-based model with a learnable despeckling stem and 
+            echogenicity-aware attention to better capture clinically relevant ultrasound features. 
+            The pipeline includes XML based dataset construction, stratified cross-validation, ablation studies, 
+            and Grad-CAM visualization for interpreting model predictions.
           </p>
           <div class="case-note">
-            <strong>What it doesn't do.</strong> It is not a medical device and must never touch a
-            clinical decision — that disclaimer is in the repository for a reason. An ensemble that agrees
-            with itself is not the same as an ensemble that is right, and the honest next step is
-            evaluation against radiologist labels on data from more than one machine.
+            <strong>What it doesn't do.</strong> TI-RACS is a research prototype, not a medical device, 
+            and must not be used to make clinical decisions. Strong validation metrics on a single dataset 
+            do not guarantee clinical reliability or generalization. The next step is evaluation against radiologist-annotated data 
+            collected across multiple institutions and ultrasound systems, with particular attention to robustness and external generalization.
           </div>
           <ul class="chips">
             <li>PyTorch</li><li>timm</li><li>ConvNeXt</li><li>Swin</li><li>ViT</li><li>Grad-CAM</li>
@@ -582,7 +586,7 @@
 
         <a class="proj" data-cat="data ml" href="https://github.com/jibanchaudhary/Trading_bot" target="_blank" rel="noopener">
           <h3>Trading bot</h3>
-          <p>Market analysis over Nepali stock data — technical indicators, an LSTM price model, charts and a rough profit-and-loss projection.</p>
+          <p>Market analysis over Nepali stock data — an LSTM that reads RSI, MACD and other indicators and classifies the outlook as bullish, neutral or bearish, plus charts and a rough profit-and-loss projection.</p>
           <span class="proj-foot"><span class="dot dot-jn"></span>Jupyter · Keras · Pandas</span>
         </a>
 
@@ -622,12 +626,6 @@
           <span class="proj-foot"><span class="dot dot-jn"></span>Jupyter · Python</span>
         </a>
 
-        <a class="proj" data-cat="web learning" href="https://github.com/jibanchaudhary/The-jumping-Doraemon" target="_blank" rel="noopener">
-          <h3>The Jumping Doraemon</h3>
-          <p>A small browser game in plain JavaScript — canvas, collision detection, and a loop that taught me more about state than any tutorial.</p>
-          <span class="proj-foot"><span class="dot dot-js"></span>JavaScript · Canvas</span>
-        </a>
-
         <a class="proj" data-cat="web" href="https://github.com/jibanchaudhary/Personal-Portfolio-Website" target="_blank" rel="noopener">
           <h3>Personal portfolio (v1)</h3>
           <p>The first version of this site, in hand-written HTML, CSS and JavaScript. Left up because the starting point is part of the story.</p>
@@ -650,7 +648,7 @@
     <div class="wrap">
       <header class="section-head fade">
         <span class="section-tag">The path here</span>
-        <h2>Six years, from labelling data to building with it</h2>
+        <h2>Four years, from labelling data to building with it</h2>
       </header>
 
       <div class="timeline">
@@ -674,7 +672,7 @@
           <div class="tl-rail"><span class="tl-dot"></span></div>
           <div class="tl-card">
             <div class="tl-top">
-              <h3>AI Engineer, Intern</h3>
+              <h3>Data Engineer, Intern</h3>
               <span class="tl-date">Feb — Jun 2025</span>
             </div>
             <p class="tl-org">O.Labs (Olive Group) · Kathmandu</p>
@@ -735,7 +733,7 @@
           </div>
           <div class="tool-group">
             <span class="tool-label">ML &amp; deep learning</span>
-            <ul class="chips"><li>PyTorch</li><li>TensorFlow</li><li>timm</li><li>Transformers</li><li>CNNs</li><li>LSTMs</li></ul>
+            <ul class="chips"><li>PyTorch</li><li>TensorFlow</li><li>timm</li><li>Transformers</li><li>CNNs</li><li>LSTMs</li><li>PCA</li></ul>
           </div>
           <div class="tool-group">
             <span class="tool-label">Data</span>
