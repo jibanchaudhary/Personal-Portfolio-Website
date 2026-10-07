@@ -129,7 +129,7 @@
     <ul class="hero-stats wrap">
       <li class="fade">
         <span class="stat-num">4</span>
-        <span class="stat-label">backbones in one ensemble<br />ConvNeXt, EfficientNetV2, Swin, ViT</span>
+        <span class="stat-label">backbones benchmarked<br />ConvNeXt, EfficientNetV2, Swin, ViT</span>
       </li>
       <li class="fade">
         <span class="stat-num">5</span>
@@ -179,69 +179,12 @@
       <!-- ── TI-RACS ── -->
       <article class="case fade">
         <div class="case-visual">
-          <div class="diagram-frame">
-            <span class="diagram-title">Four backbones, one verdict</span>
-            <div class="diagram-scroll">
-              <svg class="diagram" viewBox="0 0 780 300" role="img" aria-label="Diagram: a thyroid ultrasound image is fed to ConvNeXt-T, EfficientNetV2-S, Swin-T and ViT-B/16 in parallel; their probabilities are combined by soft voting into a TI-RADS category from TR1 to TR5, with a Grad-CAM overlay for explanation.">
-                <defs>
-                  <marker id="a0" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-                    <path class="arrow-head" d="M0 0.5 L9 5 L0 9.5 z"/>
-                  </marker>
-                </defs>
-
-                <g class="node">
-                  <rect class="n-box" x="6" y="116" width="116" height="68" rx="12"/>
-                  <path class="scan" d="M28 168 q16 -40 30 -18 t22 -26 t16 20" fill="none"/>
-                  <text class="n-s" x="64" y="200">ultrasound</text>
-                </g>
-
-                <path class="edge" d="M128 150 C160 150 158 32 190 32" marker-end="url(#a0)" fill="none"/>
-                <path class="edge" d="M128 150 C160 150 158 104 190 104" marker-end="url(#a0)" fill="none"/>
-                <path class="edge" d="M128 150 C160 150 158 176 190 176" marker-end="url(#a0)" fill="none"/>
-                <path class="edge" d="M128 150 C160 150 158 248 190 248" marker-end="url(#a0)" fill="none"/>
-
-                <g class="node">
-                  <rect class="n-box n-model" x="196" y="10" width="164" height="44" rx="10"/>
-                  <text class="n-t n-sm" x="278" y="37">ConvNeXt-T</text>
-                  <rect class="n-box n-model" x="196" y="82" width="164" height="44" rx="10"/>
-                  <text class="n-t n-sm" x="278" y="109">EfficientNetV2-S</text>
-                  <rect class="n-box n-model" x="196" y="154" width="164" height="44" rx="10"/>
-                  <text class="n-t n-sm" x="278" y="181">Swin-T</text>
-                  <rect class="n-box n-model" x="196" y="226" width="164" height="44" rx="10"/>
-                  <text class="n-t n-sm" x="278" y="253">ViT-B/16</text>
-                </g>
-
-                <path class="edge" d="M366 32 C404 32 400 150 434 150" marker-end="url(#a0)" fill="none"/>
-                <path class="edge" d="M366 104 C404 104 400 150 434 150" marker-end="url(#a0)" fill="none"/>
-                <path class="edge" d="M366 176 C404 176 400 150 434 150" marker-end="url(#a0)" fill="none"/>
-                <path class="edge" d="M366 248 C404 248 400 150 434 150" marker-end="url(#a0)" fill="none"/>
-
-                <g class="node">
-                  <rect class="n-box n-accent n-thick" x="440" y="118" width="122" height="64" rx="12"/>
-                  <text class="n-t" x="501" y="144">Soft voting</text>
-                  <text class="n-s" x="501" y="166">averaged probs</text>
-                </g>
-                <line class="edge" x1="568" y1="150" x2="600" y2="150" marker-end="url(#a0)"/>
-
-                <!-- TI-RADS ladder -->
-                <g class="ladder">
-                  <rect class="tr tr1" x="606" y="72"  width="150" height="26" rx="6"/>
-                  <text class="tr-t" x="616" y="90">TR1 · benign</text>
-                  <rect class="tr tr2" x="606" y="104" width="150" height="26" rx="6"/>
-                  <text class="tr-t" x="616" y="122">TR2 · not suspicious</text>
-                  <rect class="tr tr3" x="606" y="136" width="150" height="26" rx="6"/>
-                  <text class="tr-t" x="616" y="154">TR3 · mildly</text>
-                  <rect class="tr tr4" x="606" y="168" width="150" height="26" rx="6"/>
-                  <text class="tr-t" x="616" y="186">TR4 · moderately</text>
-                  <rect class="tr tr5" x="606" y="200" width="150" height="26" rx="6"/>
-                  <text class="tr-t" x="616" y="218">TR5 · highly</text>
-                  <text class="n-s" x="681" y="248">ACR TI-RADS risk</text>
-                </g>
-
-                <text class="n-c" x="278" y="290">plus Grad-CAM overlays, so a radiologist can see where it looked</text>
-              </svg>
-            </div>
-          </div>
+          <figure class="shot shot-wide">
+            <button class="shot-btn" data-full="assets/tiracs-interface.jpg" data-cap="The TI-RACS interface running Swin-T with the despeckling stem and echogenicity-aware attention: a TI-RADS grade with confidence, the hypo/iso/hyper echogenicity split, and nodule segmentation over the original ultrasound.">
+              <img src="assets/tiracs-interface.jpg" alt="TI-RACS interface showing a T3 mildly suspicious grade at 79% confidence, an echogenicity breakdown, and a segmented thyroid nodule on an ultrasound image" loading="lazy" />
+            </button>
+            <figcaption>Swin-T with the despeckling stem and echogenicity-aware attention, grading a nodule and segmenting it on the scan.</figcaption>
+          </figure>
         </div>
 
         <div class="case-body">
@@ -332,62 +275,12 @@
       <!-- ── Legal advisor ── -->
       <article class="case fade">
         <div class="case-visual">
-          <div class="diagram-frame">
-            <span class="diagram-title">Query path</span>
-            <div class="diagram-scroll">
-              <svg class="diagram" viewBox="0 0 780 250" role="img" aria-label="Diagram: a legal question passes through an intent gate, is embedded and matched against a statute corpus, classified by Legal-BERT, and returned as a plain-language summary.">
-                <defs>
-                  <marker id="a1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-                    <path class="arrow-head" d="M0 0.5 L9 5 L0 9.5 z"/>
-                  </marker>
-                </defs>
-
-                <g class="node">
-                  <rect class="n-box" x="6" y="60" width="128" height="62" rx="12"/>
-                  <text class="n-t" x="70" y="86">User question</text>
-                  <text class="n-s" x="70" y="105">plain language</text>
-                </g>
-                <line class="edge" x1="140" y1="91" x2="176" y2="91" marker-end="url(#a1)"/>
-
-                <g class="node">
-                  <rect class="n-box n-accent" x="182" y="60" width="128" height="62" rx="12"/>
-                  <text class="n-t" x="246" y="86">Intent gate</text>
-                  <text class="n-s" x="246" y="105">LangChain agent</text>
-                </g>
-                <line class="edge" x1="316" y1="91" x2="352" y2="91" marker-end="url(#a1)"/>
-
-                <g class="node">
-                  <rect class="n-box" x="358" y="60" width="128" height="62" rx="12"/>
-                  <text class="n-t" x="422" y="86">Retrieve</text>
-                  <text class="n-s" x="422" y="105">embedding match</text>
-                </g>
-                <line class="edge" x1="492" y1="91" x2="528" y2="91" marker-end="url(#a1)"/>
-
-                <g class="node">
-                  <rect class="n-box n-accent" x="534" y="60" width="128" height="62" rx="12"/>
-                  <text class="n-t" x="598" y="86">Legal-BERT</text>
-                  <text class="n-s" x="598" y="105">classify + rank</text>
-                </g>
-                <path class="edge" d="M598 128 v34 h-176" marker-end="url(#a1)" fill="none"/>
-
-                <g class="node">
-                  <rect class="n-box n-out" x="286" y="168" width="136" height="58" rx="12"/>
-                  <text class="n-t" x="354" y="192">Summarised answer</text>
-                  <text class="n-s" x="354" y="210">statute + what it means</text>
-                </g>
-
-                <g class="store">
-                  <ellipse class="cyl" cx="700" cy="176" rx="52" ry="13"/>
-                  <path class="cyl" d="M648 176 v34 a52 13 0 0 0 104 0 v-34"/>
-                  <ellipse class="cyl-top" cx="700" cy="176" rx="52" ry="13"/>
-                  <text class="n-s" x="700" y="238">statutes · policies · reports</text>
-                </g>
-                <path class="edge edge-dash" d="M660 176 h-160 v-48" marker-end="url(#a1)" fill="none"/>
-
-                <text class="n-c" x="422" y="40">semantic, not keyword — people and statutes use different words</text>
-              </svg>
-            </div>
-          </div>
+          <figure class="shot shot-wide">
+            <button class="shot-btn" data-full="assets/legal-query-result.jpg" data-cap="The answer to &quot;Someone hacked my computer and stole the source code of my application&quot; — a matching real incident, and the ETA 2063 section that applies to it, Section 46: Punishment for Unauthorized Access.">
+              <img src="assets/legal-query-result.jpg" alt="Query result screen showing a matched incident about computer source code theft and the policy Punishment for Unauthorized Access under Section 46 of ETA 2063" loading="lazy" />
+            </button>
+            <figcaption>Asked about a hacked computer and stolen source code, it returns a matching Nepali case and the ETA 2063 section that applies.</figcaption>
+          </figure>
         </div>
 
         <div class="case-body">
@@ -546,7 +439,7 @@
         <a class="proj" data-cat="ml" href="https://github.com/jibanchaudhary/TI-RACS-Thyroid-Imaging-Reporting-and-Classification-System-" target="_blank" rel="noopener">
           <span class="proj-star" title="Featured">★</span>
           <h3>TI-RACS</h3>
-          <p>Thyroid ultrasound risk stratification into ACR TI-RADS categories — four-backbone soft-voting ensemble with Grad-CAM explanations and 5-fold cross-validation.</p>
+          <p>Thyroid ultrasound risk stratification into ACR TI-RADS categories — four backbones benchmarked, then a Swin-based model with a learnable despeckling stem, Grad-CAM explanations and 5-fold cross-validation.</p>
           <span class="proj-foot"><span class="dot dot-py"></span>Python · PyTorch · timm</span>
         </a>
 
